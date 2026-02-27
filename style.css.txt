@@ -1,0 +1,78 @@
+style.css
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+}
+
+.brand { display: flex; align-items: center; gap: 8px; }
+.brand .logo { width: 60px; height: auto; }
+.brand .logo-text { font-size: 1.2rem; font-weight: bold; color: white; }
+
+.nav-links-desktop { list-style: none; display: flex; gap: 20px; }
+.nav-links-desktop li a { color: white; text-decoration: none; font-size: 1rem; transition: color 0.3s; }
+.nav-links-desktop li a:hover { color: lightblue; }
+.nav-links-desktop li a.active { color: yellow; font-weight: bold; }
+
+.hamburger { display: none; font-size: 2rem; cursor: pointer; }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    padding-top: 20px;
+    transition: left 0.3s ease;
+    z-index: 100;
+}
+.sidebar.open { left: 0; }
+
+.close-btn {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    align-self: flex-end;
+    padding: 0 20px;
+}
+
+.sidebar ul { list-style: none; width: 100%; text-align: center; }
+.sidebar ul li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.sidebar ul li a:hover { color: lightblue; }
+.sidebar ul li a.active { color: yellow; font-weight: bold; }
+
+
+.page-notification {
+    margin: 20px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .nav-links-desktop { display: none; }
+    .hamburger { display: block; }
+    .brand .logo { width: 45px; }
+    .brand .logo-text { font-size: 1rem; }
+}
