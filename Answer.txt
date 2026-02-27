@@ -1,0 +1,4 @@
+Answer:
+
+
+State was managed by keeping track of which sidebar links were active and whether the sidebar was open or closed. Asynchronous behavior was used in the notification, where clicking a link first showed “Loading page…” and then changed to “Page Loaded!” after 2 seconds using setTimeout. Event bubbling is when a click on an element triggers its event first and then moves up to its parent elements in the DOM.
